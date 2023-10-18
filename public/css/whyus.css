@@ -9,16 +9,17 @@
     text-decoration: none;
   }
   
-  .whyUs-heading {
+  /* .whyUs-heading {
     font-size: 30px;
-    padding-top: 2%;
+   
     font-family: 'Poppins', sans-serif;
-  }
+  } */
   
   .why-us .whyUs-heading p {
+    padding-top: 2%;
     font-family: var(--font-poppins);
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 600;
   }
   
   .whyUs-card {
@@ -29,7 +30,7 @@
   }
   
   .wcard {
-    width: 30rem;
+    width: 22rem;
     object-fit: cover;
     /* border: 2px solid red; */
     border-radius: 25px;
@@ -68,7 +69,7 @@
     padding: 20px;
     text-align: justify;
     font-family: 'Poppins', sans-serif;
-    font-size: 11px;
+    font-size: 15px;
   }
   
   

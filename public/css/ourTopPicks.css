@@ -1,0 +1,10 @@
+.our-top-picks{
+    color: #4B8C91;
+    text-align: center;
+}
+.ourTopPicks-heading{
+    padding-top: 2%;
+    font-family: var(--font-poppins);
+    font-size: 4rem;
+    font-weight: 600;
+}

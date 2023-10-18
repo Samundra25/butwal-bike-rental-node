@@ -1,111 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Butwal Bike Rental</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/ourServices.css" />
-    <link rel="stylesheet" href="../css/whyus.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/loadingScreen.css" />
-    <link rel="stylesheet" href="../css/swiper.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
 
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butwal Bike Rental</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/ourServices.css" />
+  <link rel="stylesheet" href="/css/whyus.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/bookForm.css" />
+  <link rel="stylesheet" href="/css/ourTopPicks.css" />
+  <link rel="stylesheet" href="/css/loadingScreen.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-  </head>
+  <!--Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-  <style>
-    .showcase-main {
-      display: flex;
-      height: 100vh;
-    }
+  <!--Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    .showcase-main .showcase1 {
-      width: 50%;
-    }
+  <!--Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    .showcase-main .showcase2 {
-      width: 50%;
-    }
+  <!-- local CSS -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+</head>
 
-    .back-image {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-    }
+<body>
+  <!-- White loading screen -->
+  <div id="loading-screen"></div>
 
-    @media (max-width: 900px) {
-      .showcase-main .showcase1 {
-        display: none;
-      }
+  <!-- header section starts -->
+    <div class="headTitle">
+      <a href="/" class="logo"><img src="/img/rental_logo.png" /></a>
+      <div class="textContainer">
+        <p class="titleName">BUTWAL BIKE RENTALS</p>
+        <p class="slogan">Make Every Ride Special</p>
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      
+      <div class="openbtn" onclick="openNav()">
+        <i class="fas fa-bars" id="menu"></i>
+      </div>
+    </div>
+    <div class="showcase-main">
+      <div class="showcase1">
+        <img class="back-image" src="/img/customer1.jpg" alt="" />
+      </div>
+      <div class="showcase2" style="background-color: #4b8c91 !important">
+        <div class="bookForm">
+          <div class="formTitle">
+            <p class="formHeading">PICK YOUR NEXT RIDE</p>
+          </div>
+          <div class="form">
+            <form action="#" method="post">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="startDate">
 
-      .showcase-main .showcase2 {
-      width: 100%;
-    }
+              <label for="endDate">End DAte</label>
+              <input type="date" id="endDate" name="endDate">
 
-    }
-  </style>
-  <body>
-    <!-- White loading screen -->
-    <div id="loading-screen"></div>
-
-    <!-- header section starts -->
-    <header class="header">
-      <div class="headTitle">
-        <a href="/" class="logo"><img src="/img/rental_logo.png" /></a>
-        <div class="textContainer">
-          <p class="titleName">BUTWAL BIKE RENTALS</p>
-          <p class="slogan">Make Every Ride Special</p>
-        </div>
-        <div id="mySidepanel" class="sidepanel">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >×</a
-          >
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
-        </div>
-
-        <div class="openbtn" onclick="openNav()">
-          <i class="fas fa-bars" id="menu"></i>
+              <label for="bikebrand">Choose Brand</label>
+              <select id="bikebrand" name="bikebrand">
+                <option value="pulsar">Pulsar</option>
+                <option value="yamaha">Yamaha</option>
+                <option value="tvs">TVS</option>
+              </select>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
         </div>
       </div>
-      <div class="showcase-main">
-        <div class="showcase1">
-          <img class="back-image" src="/img/customer1.jpg" alt="" />
-        </div>
-        <div
-          class="showcase2"
-          style="background-color: #4b8c91 !important"
-        ></div>
-      </div>
-    </header>
+    </div>
+  
+  <!-- header section ends -->
 
-    <!-- header section ends -->
-
-    <!-- why-Us starts -->
-    <!-- <div class="why-us">
+  <!-- why-Us starts -->
+  <div class="why-us">
     <div class="whyUs-heading">
       <p>WHY US ?</p>
     </div>
@@ -171,11 +151,19 @@
         </a>
       </div>
     </div>
-  </div> -->
-    <!-- why-Us ends -->
+  </div>
+  <!-- why-Us ends -->
 
-    <!-- location section starts -->
-    <!-- <div class="location">
+  <!-- our-top-picks starts -->
+    <div class="our-top-picks">
+      <div class="ourTopPicks-heading">
+        <p>Our Top Picks</p>
+      </div>
+    </div>
+  <!-- our-top-picks ends -->
+
+  <!-- location section starts -->
+  <!-- <div class="location">
     <div class="location-heading">
       <p class="loc">FIND OUR LOCATION</p>
 
@@ -201,48 +189,59 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div> -->
-    <script>
-      showMap("manigram-map");
+  <script>
+    showMap("manigram-map");
 
-      function showMap(mapId) {
-        // Hide all map containers
-        var mapContainers = document.querySelectorAll(".map-container");
-        mapContainers.forEach(function (container) {
-          container.style.display = "none";
-        });
+    function showMap(mapId) {
+      // Hide all map containers
+      var mapContainers = document.querySelectorAll(".map-container");
+      mapContainers.forEach(function (container) {
+        container.style.display = "none";
+      });
 
-        // Show the selected map container
-        var selectedMap = document.getElementById(mapId);
-        selectedMap.style.display = "block";
+      // Show the selected map container
+      var selectedMap = document.getElementById(mapId);
+      selectedMap.style.display = "block";
 
-        // Update the active button styling
-        var buttons = document.querySelectorAll("button[data-map]");
-        buttons.forEach(function (button) {
-          button.classList.remove("active");
-        });
-        var activeButton = document.querySelector(
-          `button[data-map="${mapId}"]`
-        );
-        activeButton.classList.add("active");
-      }
-    </script>
-    <!-- location section ends -->
+      // Update the active button styling
+      var buttons = document.querySelectorAll("button[data-map]");
+      buttons.forEach(function (button) {
+        button.classList.remove("active");
+      });
+      var activeButton = document.querySelector(
+        `button[data-map="${mapId}"]`
+      );
+      activeButton.classList.add("active");
+    }
+  </script>
+  <!-- location section ends -->
 
-    <!-- menu-toggler -->
-    <script>
-      function openNav() {
-        document.getElementById("mySidepanel").style.width = "56%";
-        document.querySelector(".showcase1").classList.add("overlay");
-      }
+  <!-- menu-toggler -->
+  <!-- JavaScript for menu toggle -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.display = "block";
+      console.log("opened");
+    }
 
-      function closeNav() {
-        document.getElementById("mySidepanel").style.width = "0";
-        // document.querySelector(".showcase1").classList.remove("overlay");
-      }
-    </script>
+    function closeNav() {
+      document.getElementById("mySidepanel").style.display = "none";
+    }
+    // function toggleNav() {
+    //         var sidepanel = document.getElementById("mySidepanel");
+    //         if (sidepanel.style.width === "250px" || sidepanel.style.width === "") {
+    //             sidepanel.style.width = "0px";
+    //         } else {
+    //             sidepanel.style.width = "0";
+    //         }
+    //     }
 
-    <!-- Footer Section Starts -->
-    <!-- <div class="footer-clean" id="footer">
+  </script>
+  
+
+
+  <!-- Footer Section Starts -->
+  <!-- <div class="footer-clean" id="footer">
     <footer>
       <div class="container-footer">
         <div class="footerFlex">
@@ -311,49 +310,47 @@
     </footer>
   </div> -->
 
-    <script>
-      // Add this script at the bottom of your HTML, just before </body>
+  <script>
+    // Add this script at the bottom of your HTML, just before </body>
 
-      // Function to fade out the loading screen when the page is fully loaded
-      window.addEventListener("load", function () {
-        const loadingScreen = document.getElementById("loading-screen");
-        loadingScreen.style.opacity = "0"; // Set opacity to 0 to fade out
-        setTimeout(function () {
-          loadingScreen.style.display = "none"; // Hide the loading screen
-        }, 1000); // Adjust the duration of the fade-out (in milliseconds)
-      });
-    </script>
+    // Function to fade out the loading screen when the page is fully loaded
+    window.addEventListener("load", function () {
+      const loadingScreen = document.getElementById("loading-screen");
+      loadingScreen.style.opacity = "0"; // Set opacity to 0 to fade out
+      setTimeout(function () {
+        loadingScreen.style.display = "none"; // Hide the loading screen
+      }, 1000); // Adjust the duration of the fade-out (in milliseconds)
+    });
+  </script>
 
-    <!-- <div class="t7" style="background-color: #000;text-align: center;
+  <!-- <div class="t7" style="background-color: #000;text-align: center;
             padding: 10px; ">
     <p style="font-size: 1.5rem; color: #ffffff;"><i class="fa-sharp fa-regular fa-copyright"></i> 2023 All Rights
       Reserved || Developed By <a href="https://www.facebook.com/triple7tech" target="_blank"
         style="text-decoration: underline;color:white">Triple Seven</a></p>
   </div> -->
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    <!-- Footer Section ends -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer Section ends -->
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-      });
-    </script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+    });
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.js"
-      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  </body>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+
 </html>
