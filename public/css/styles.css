@@ -61,7 +61,10 @@ a {
 }
 
 .textContainer {
+  display: flex;
   margin: 5px 0px 0px 5px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* location-section css */
