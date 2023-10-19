@@ -35,22 +35,28 @@
 
   <!-- header section starts -->
     <div class="headTitle">
-      <a href="/" class="logo"><img src="/img/rental_logo.png" /></a>
-      <div class="textContainer">
-        <p class="titleName">BUTWAL BIKE RENTALS</p>
-        <p class="slogan">Make Every Ride Special</p>
+      <div class="brand-div">
+        <a href="/" class="logo"><img src="/img/rental_logo.png" /></a>
+        <div class="textContainer">
+          <p class="titleName">BUTWAL BIKE RENTALS</p>
+          <p class="slogan">Make Every Ride Special</p>
+        </div>
       </div>
+      <!-- <button class="openbtn" onclick="toggleNav()">Toggle Nav</button> -->
+
       <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">×</a>
+        <!-- <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">×</a> -->
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
       </div>
       
-      <div class="openbtn" onclick="openNav()">
+      <div class="openbtn" onclick="toggleNav()"></div>
+
+      <!-- <div class="openbtn" onclick="openNav()">
         <i class="fas fa-bars" id="menu"></i>
-      </div>
+      </div> -->
     </div>
     <div class="showcase-main">
       <div class="showcase1">
@@ -219,14 +225,19 @@
   <!-- menu-toggler -->
   <!-- JavaScript for menu toggle -->
   <script>
-    function openNav() {
-      document.getElementById("mySidepanel").style.display = "block";
-      console.log("opened");
-    }
+    function toggleNav() {
+    var sidepanel = document.getElementById("mySidepanel");
+    var openbtn = document.querySelector(".openbtn");
 
-    function closeNav() {
-      document.getElementById("mySidepanel").style.display = "none";
+    if (sidepanel.style.display === "block") {
+        sidepanel.style.display = "none";
+        openbtn.classList.remove("active");
+    } else {
+        sidepanel.style.display = "block";
+        openbtn.classList.add("active");
     }
+}
+
     // function toggleNav() {
     //         var sidepanel = document.getElementById("mySidepanel");
     //         if (sidepanel.style.width === "250px" || sidepanel.style.width === "") {
@@ -322,6 +333,34 @@
       }, 1000); // Adjust the duration of the fade-out (in milliseconds)
     });
   </script>
+
+<script>
+  const logoImage = document.querySelector(".mama-logo-img");
+
+  const newImageSrc = "./img/garage-black.png"; // Replace with your new image URL
+
+  // Get a reference to the .headTitle element
+  const headTitle = document.querySelector(".headTitle");
+
+  // Function to handle scroll event
+  function handleScroll() {
+    // Check if the user has scrolled beyond a certain point (e.g., 100 pixels from the top)
+    if (window.scrollY > 100) {
+      // Change the image source
+      // logoImage.src = newImageSrc;
+
+      // Add the 'scroll-bg' class to apply the background color
+      headTitle.classList.add("scroll-bg");
+    } else {
+      // Remove the 'scroll-bg' class if the user scrolls back to the top
+      headTitle.classList.remove("scroll-bg");
+      // logoImage.src = "./img/garage-white.png";
+    }
+  }
+
+  // Add a scroll event listener to the window
+  window.addEventListener("scroll", handleScroll);
+</script>
 
   <!-- <div class="t7" style="background-color: #000;text-align: center;
             padding: 10px; ">
