@@ -150,7 +150,6 @@ a {
 
 .footer-clean {
   padding: 50px 0;
-  background-color: red;
   color: #000;
   text-align: center;
 }
@@ -182,7 +181,8 @@ a {
 
 .footer-clean ul li span {
   color: #000;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
+  font-size: 22px;
 }
 
 .footer-clean ul a {
@@ -241,6 +241,16 @@ a {
     padding-bottom: 20px;
 
   }
+  .footerFlex {
+    margin-left: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-clean ul li span {
+  color: #000;
+  margin-left: 0.5rem;
+  font-size: 20px;
+}
 }
 
 @media (max-width: 768px) {
