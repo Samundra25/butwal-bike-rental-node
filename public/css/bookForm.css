@@ -1,11 +1,13 @@
 .bookForm{
   padding: 5rem;
+
 }
 
 .formHeading{
     color: #ffffff;
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 .form label{
