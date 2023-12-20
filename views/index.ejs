@@ -15,7 +15,9 @@
   <link rel="stylesheet" href="/css/ourTopPicks.css" />
   <link rel="stylesheet" href="/css/loadingScreen.css" />
   <link rel="stylesheet" href="/css/faq.css" />
+  <link rel="stylesheet" href="/css/loginForm.css" />
 
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!--Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
@@ -71,9 +73,9 @@
     </div>
     <div class="showcase2" style="background-color: #4b8c91 !important">
       <div class="bookForm">
-        <div class="formTitle">
-          <p class="formHeading">PICK YOUR NEXT RIDE</p>
-        </div>
+          <div class="formTitle">
+            <p class="formHeading">PICK YOUR NEXT RIDE</p>
+          </div>
         <div class="form">
           <form action="#" method="post">
             <label for="startDate">Start Date</label>
@@ -89,12 +91,41 @@
               <option value="tvs">TVS</option>
             </select>
             <input type="submit" value="Submit">
+           
           </form>
         </div>
+        <div style="color: aliceblue; text-align: center;">
+          <a style="color: aliceblue;" href="javascript:void(0);" onclick="toggleForm()">Login / Register?</a> 
+        </div>
       </div>
+      <!-- <div class="loginForm" id="loginForm" style="display: none;margin-top: 20px;" >
+        <div class="formTitle">
+          <p class="formHeading">Login Your Account</p>
+        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+      </div> -->
+      <%- include('loginForm.ejs')%>
+      
     </div>
   </div>
 
+  <script>
+    function toggleForm() {
+      const bookForm = document.querySelector('.bookForm');
+      const loginForm = document.getElementById('loginForm');
+
+      if (bookForm.style.display === 'block') {
+        bookForm.style.display = 'none';
+        loginForm.style.display = 'block';
+      } else {
+        bookForm.style.display = 'block';
+        loginForm.style.display = 'none';
+      }
+    }
+  </script>
   <!-- header section ends -->
 
   <!-- why-Us starts -->

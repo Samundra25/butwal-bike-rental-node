@@ -26,6 +26,8 @@
 	width: 50%;
 	overflow: hidden;
 	display: none;
+	padding-top: 25%;
+    text-align: center;
 	transition: 0.5s;
 	/* Add a transition effect for smooth opening/closing */
 }
@@ -156,6 +158,7 @@
 
 	#mySidepanel {
 		width: 100%;
+		padding-top: 50%;
 		/* Add a transition effect for smooth opening/closing */
 	}
 
